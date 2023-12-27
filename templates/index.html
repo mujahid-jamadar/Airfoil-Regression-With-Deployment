@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Input Form</h1>
+        <form action="/predict" method="post">
+            <label for="frequency">Frequency:</label>
+            <input type="text" name="frequency" required><br>
+            
+            <label for="angle_of_attack">Angle of Attack:</label>
+            <input type="text" name="angle_of_attack" required><br>
+            
+            <label for="chord_length">Chord Length:</label>
+            <input type="text" name="chord_length" required><br>
+            
+            <label for="free_stream_velocity">Free-stream Velocity:</label>
+            <input type="text" name="free_stream_velocity" required><br>
+            
+            <label for="suction_side">Suction Side:</label>
+            <input type="text" name="suction_side" required><br>
+            
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
